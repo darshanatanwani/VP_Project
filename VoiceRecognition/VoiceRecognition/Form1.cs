@@ -7,14 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace VoiceRecognition
 {
-    public partial class Form1 : Form
+    public partial class FormVoiceRecognition : Form
     {
-        public Form1()
+        public FormVoiceRecognition()
         {
             InitializeComponent();
+        }
+
+        private void buttonRecordVoice_Click(object sender, EventArgs e)
+        {
+            if (buttonRecordVoice.Text == "Record Voice")
+            {
+                buttonRecordVoice.Text = "Stop Recording";
+            }
+            else if (buttonRecordVoice.Text == "Stop Recording")
+            {
+                buttonRecordVoice.Text = "Record Voice";
+            }
+        }
+
+        public string userSelectedFilePath
+        { 
+            get
+            {
+                return textBoxBrowse.Text;
+            }
+            set
+            { 
+                textBoxBrowse.Text = value;
+            }
+
+        }
+
+        private void buttonBrowse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog FileDialog = new OpenFileDialog();
+            System.Windows.Forms.DialogResult Dr = FileDialog.ShowDialog();
+            if(Dr == DialogResult.OK)
+            {
+                userSelectedFilePath = FileDialog.FileName;
+            }
         }
     }
 }

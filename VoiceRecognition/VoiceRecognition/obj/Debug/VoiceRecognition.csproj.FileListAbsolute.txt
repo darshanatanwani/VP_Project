@@ -1,1 +1,9 @@
 C:\Users\Darshii\Desktop\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\VoiceRecognition.exe.config
+C:\Users\Darshii\Desktop\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\VoiceRecognition.exe
+C:\Users\Darshii\Desktop\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\VoiceRecognition.pdb
+C:\Users\Darshii\Desktop\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.csprojResolveAssemblyReference.cache
+C:\Users\Darshii\Desktop\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.Properties.Resources.resources
+C:\Users\Darshii\Desktop\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.csproj.GenerateResource.Cache
+C:\Users\Darshii\Desktop\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.exe
+C:\Users\Darshii\Desktop\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.pdb
+C:\Users\Darshii\Desktop\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.FormVoiceRecognition.resources
