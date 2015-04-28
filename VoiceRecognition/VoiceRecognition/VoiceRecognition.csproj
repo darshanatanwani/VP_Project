@@ -63,6 +63,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -76,6 +77,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cochlea_wave_animated.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animated-sound-waves-s-2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VaryingWave.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XMB WAVE BLUE640x480.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\standing_wave.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Standing_Wave_Sum.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Harmonic_Standing_Wave.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waveanimation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DPLAX.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\standing_wave1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Standing_Wave_Sum1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Harmonic_Standing_Wave1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DPLAX1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waveanimation1.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

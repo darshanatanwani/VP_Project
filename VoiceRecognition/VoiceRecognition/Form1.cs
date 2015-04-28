@@ -23,21 +23,24 @@ namespace VoiceRecognition
             if (buttonRecordVoice.Text == "Record Voice")
             {
                 buttonRecordVoice.Text = "Stop Recording";
+                PbWave .Visible = true;
+
             }
             else if (buttonRecordVoice.Text == "Stop Recording")
             {
                 buttonRecordVoice.Text = "Record Voice";
+                PbWave .Visible = false;
             }
         }
 
         public string userSelectedFilePath
-        { 
+        {
             get
             {
                 return textBoxBrowse.Text;
             }
             set
-            { 
+            {
                 textBoxBrowse.Text = value;
             }
 
@@ -47,10 +50,16 @@ namespace VoiceRecognition
         {
             OpenFileDialog FileDialog = new OpenFileDialog();
             System.Windows.Forms.DialogResult Dr = FileDialog.ShowDialog();
-            if(Dr == DialogResult.OK)
+            if (Dr == DialogResult.OK)
             {
                 userSelectedFilePath = FileDialog.FileName;
             }
+        }
+
+        private void buttonIndex_Click(object sender, EventArgs e)
+        {
+            comboBoxIndex.Items.Add(textBoxBrowse.Text);
+          
         }
     }
 }
