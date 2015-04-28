@@ -30,19 +30,19 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageIndex = new System.Windows.Forms.TabPage();
+            this.comboBoxIndex = new System.Windows.Forms.ComboBox();
+            this.labelIndex = new System.Windows.Forms.Label();
             this.buttonIndex = new System.Windows.Forms.Button();
             this.labelAudioFilePath = new System.Windows.Forms.Label();
             this.textBoxBrowse = new System.Windows.Forms.TextBox();
             this.buttonBrowse = new System.Windows.Forms.Button();
             this.tabPageMatch = new System.Windows.Forms.TabPage();
+            this.PbWave = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.buttonPerformMatching = new System.Windows.Forms.Button();
             this.buttonRecordVoice = new System.Windows.Forms.Button();
-            this.labelIndex = new System.Windows.Forms.Label();
-            this.comboBoxIndex = new System.Windows.Forms.ComboBox();
-            this.PbWave = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPageIndex.SuspendLayout();
             this.tabPageMatch.SuspendLayout();
@@ -75,6 +75,24 @@
             this.tabPageIndex.TabIndex = 0;
             this.tabPageIndex.Text = "Index";
             // 
+            // comboBoxIndex
+            // 
+            this.comboBoxIndex.FormattingEnabled = true;
+            this.comboBoxIndex.Location = new System.Drawing.Point(135, 134);
+            this.comboBoxIndex.Name = "comboBoxIndex";
+            this.comboBoxIndex.Size = new System.Drawing.Size(275, 21);
+            this.comboBoxIndex.TabIndex = 6;
+            // 
+            // labelIndex
+            // 
+            this.labelIndex.AutoSize = true;
+            this.labelIndex.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelIndex.Location = new System.Drawing.Point(37, 142);
+            this.labelIndex.Name = "labelIndex";
+            this.labelIndex.Size = new System.Drawing.Size(77, 13);
+            this.labelIndex.TabIndex = 5;
+            this.labelIndex.Text = "Index File Path";
+            // 
             // buttonIndex
             // 
             this.buttonIndex.Location = new System.Drawing.Point(416, 134);
@@ -104,7 +122,7 @@
             // 
             // buttonBrowse
             // 
-            this.buttonBrowse.Location = new System.Drawing.Point(416, 54);
+            this.buttonBrowse.Location = new System.Drawing.Point(416, 53);
             this.buttonBrowse.Name = "buttonBrowse";
             this.buttonBrowse.Size = new System.Drawing.Size(75, 20);
             this.buttonBrowse.TabIndex = 1;
@@ -127,6 +145,17 @@
             this.tabPageMatch.Size = new System.Drawing.Size(533, 450);
             this.tabPageMatch.TabIndex = 1;
             this.tabPageMatch.Text = "Match";
+            // 
+            // PbWave
+            // 
+            this.PbWave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PbWave.Image = global::VoiceRecognition.Properties.Resources.waveanimation1;
+            this.PbWave.Location = new System.Drawing.Point(25, 64);
+            this.PbWave.Name = "PbWave";
+            this.PbWave.Size = new System.Drawing.Size(476, 167);
+            this.PbWave.TabIndex = 5;
+            this.PbWave.TabStop = false;
+            this.PbWave.Visible = false;
             // 
             // label1
             // 
@@ -171,35 +200,6 @@
             this.buttonRecordVoice.Text = "Record Voice";
             this.buttonRecordVoice.UseVisualStyleBackColor = true;
             this.buttonRecordVoice.Click += new System.EventHandler(this.buttonRecordVoice_Click);
-            // 
-            // labelIndex
-            // 
-            this.labelIndex.AutoSize = true;
-            this.labelIndex.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelIndex.Location = new System.Drawing.Point(37, 137);
-            this.labelIndex.Name = "labelIndex";
-            this.labelIndex.Size = new System.Drawing.Size(77, 13);
-            this.labelIndex.TabIndex = 5;
-            this.labelIndex.Text = "Index File Path";
-            // 
-            // comboBoxIndex
-            // 
-            this.comboBoxIndex.FormattingEnabled = true;
-            this.comboBoxIndex.Location = new System.Drawing.Point(135, 134);
-            this.comboBoxIndex.Name = "comboBoxIndex";
-            this.comboBoxIndex.Size = new System.Drawing.Size(275, 21);
-            this.comboBoxIndex.TabIndex = 6;
-            // 
-            // PbWave
-            // 
-            this.PbWave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PbWave.Image = global::VoiceRecognition.Properties.Resources.waveanimation1;
-            this.PbWave.Location = new System.Drawing.Point(25, 64);
-            this.PbWave.Name = "PbWave";
-            this.PbWave.Size = new System.Drawing.Size(476, 167);
-            this.PbWave.TabIndex = 5;
-            this.PbWave.TabStop = false;
-            this.PbWave.Visible = false;
             // 
             // FormVoiceRecognition
             // 
