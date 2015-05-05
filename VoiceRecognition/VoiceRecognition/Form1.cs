@@ -9,10 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace VoiceRecognition
 {
+
     public partial class FormVoiceRecognition : Form
-    {
+    { 
+        string[] audioFiles = null;
+        string[] groundTruthAudioFingerprints = null;
+        string[] configFiles = null;
+        string[] matchFiles = null;
+        private string dataDirectoryPath = @"data";
+
         public FormVoiceRecognition()
         {
             InitializeComponent();
@@ -58,8 +66,27 @@ namespace VoiceRecognition
 
         private void buttonIndex_Click(object sender, EventArgs e)
         {
-            comboBoxIndex.Items.Add(textBoxBrowse.Text);
-          
+            //comboBoxIndex.Items.Add(textBoxBrowse.Text);
+            //Read all related data from dataDirectoryPath
+            string[] subDirectories = Directory.GetDirectories(dataDirectoryPath);
+            foreach (string subDir in subDirectories)
+            {
+                if (Path.GetFileName(subDir).Equals("audio"))
+                {
+                    audioFiles = Directory.GetFiles(subDir);
+                    foreach (string audiofile in audioFiles)
+                    {
+                        //comboBoxIndex.Items.Add(audiofile);
+                        richTextBox1.Text = audiofile;   
+                    }
+                }//End if
+                
+            }//End foreach
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

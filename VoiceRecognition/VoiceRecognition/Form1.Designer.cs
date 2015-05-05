@@ -43,6 +43,7 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.buttonPerformMatching = new System.Windows.Forms.Button();
             this.buttonRecordVoice = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPageIndex.SuspendLayout();
             this.tabPageMatch.SuspendLayout();
@@ -62,6 +63,7 @@
             // tabPageIndex
             // 
             this.tabPageIndex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPageIndex.Controls.Add(this.richTextBox1);
             this.tabPageIndex.Controls.Add(this.comboBoxIndex);
             this.tabPageIndex.Controls.Add(this.labelIndex);
             this.tabPageIndex.Controls.Add(this.buttonIndex);
@@ -201,6 +203,15 @@
             this.buttonRecordVoice.UseVisualStyleBackColor = true;
             this.buttonRecordVoice.Click += new System.EventHandler(this.buttonRecordVoice_Click);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(40, 205);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(247, 219);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
             // FormVoiceRecognition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +251,7 @@
         private System.Windows.Forms.PictureBox PbWave;
         private System.Windows.Forms.ComboBox comboBoxIndex;
         private System.Windows.Forms.Label labelIndex;
+        private System.Windows.Forms.RichTextBox richTextBox1;
         // private System.Windows.Forms.PictureBox pbwave;
     }
 }

@@ -135,6 +135,17 @@
   <ItemGroup>
     <None Include="Resources\waveanimation1.gif" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="data\audio\Rec_01.mp3" />
+    <Content Include="data\audio\Rec_02.mp3" />
+    <Content Include="data\audio\Rec_03.mp3" />
+    <Content Include="data\audio\Rec_04.mp3" />
+    <Content Include="data\audio\Rec_05.mp3" />
+    <Content Include="data\audio\Rec_06.mp3" />
+    <Content Include="data\audio\reveng_s4e11_p1.mp3" />
+    <Content Include="data\audio\reveng_s4e11_p2.mp3" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
