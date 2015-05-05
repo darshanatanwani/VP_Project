@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageIndex = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.comboBoxIndex = new System.Windows.Forms.ComboBox();
             this.labelIndex = new System.Windows.Forms.Label();
             this.buttonIndex = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.buttonPerformMatching = new System.Windows.Forms.Button();
             this.buttonRecordVoice = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPageIndex.SuspendLayout();
             this.tabPageMatch.SuspendLayout();
@@ -77,6 +77,15 @@
             this.tabPageIndex.TabIndex = 0;
             this.tabPageIndex.Text = "Index";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(135, 134);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(275, 258);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
             // comboBoxIndex
             // 
             this.comboBoxIndex.FormattingEnabled = true;
@@ -84,6 +93,7 @@
             this.comboBoxIndex.Name = "comboBoxIndex";
             this.comboBoxIndex.Size = new System.Drawing.Size(275, 21);
             this.comboBoxIndex.TabIndex = 6;
+            this.comboBoxIndex.Visible = false;
             // 
             // labelIndex
             // 
@@ -202,15 +212,6 @@
             this.buttonRecordVoice.Text = "Record Voice";
             this.buttonRecordVoice.UseVisualStyleBackColor = true;
             this.buttonRecordVoice.Click += new System.EventHandler(this.buttonRecordVoice_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(40, 205);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(247, 219);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // FormVoiceRecognition
             // 

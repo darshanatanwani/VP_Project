@@ -66,6 +66,7 @@ namespace VoiceRecognition
 
         private void buttonIndex_Click(object sender, EventArgs e)
         {
+            richTextBox1.Clear();
             //comboBoxIndex.Items.Add(textBoxBrowse.Text);
             //Read all related data from dataDirectoryPath
             string[] subDirectories = Directory.GetDirectories(dataDirectoryPath);
@@ -76,13 +77,15 @@ namespace VoiceRecognition
                     audioFiles = Directory.GetFiles(subDir);
                     foreach (string audiofile in audioFiles)
                     {
-                        //comboBoxIndex.Items.Add(audiofile);
-                        richTextBox1.Text = audiofile;   
+                        richTextBox1.AppendText(audiofile);
+                        richTextBox1.AppendText(Environment.NewLine);
                     }
                 }//End if
-                
             }//End foreach
+            
         }
+
+
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
