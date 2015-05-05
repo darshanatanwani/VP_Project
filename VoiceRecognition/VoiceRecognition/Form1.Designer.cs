@@ -40,7 +40,7 @@
             this.tabPageMatch = new System.Windows.Forms.TabPage();
             this.PbWave = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_matchResult = new System.Windows.Forms.RichTextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.buttonPerformMatching = new System.Windows.Forms.Button();
             this.buttonRecordVoice = new System.Windows.Forms.Button();
@@ -84,7 +84,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(275, 258);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // comboBoxIndex
             // 
@@ -147,7 +146,7 @@
             this.tabPageMatch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPageMatch.Controls.Add(this.PbWave);
             this.tabPageMatch.Controls.Add(this.label1);
-            this.tabPageMatch.Controls.Add(this.richTextBox);
+            this.tabPageMatch.Controls.Add(this.richTextBox_matchResult);
             this.tabPageMatch.Controls.Add(this.progressBar1);
             this.tabPageMatch.Controls.Add(this.buttonPerformMatching);
             this.tabPageMatch.Controls.Add(this.buttonRecordVoice);
@@ -179,13 +178,13 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Matches";
             // 
-            // richTextBox
+            // richTextBox_matchResult
             // 
-            this.richTextBox.Location = new System.Drawing.Point(0, 289);
-            this.richTextBox.Name = "richTextBox";
-            this.richTextBox.Size = new System.Drawing.Size(533, 161);
-            this.richTextBox.TabIndex = 3;
-            this.richTextBox.Text = "";
+            this.richTextBox_matchResult.Location = new System.Drawing.Point(0, 289);
+            this.richTextBox_matchResult.Name = "richTextBox_matchResult";
+            this.richTextBox_matchResult.Size = new System.Drawing.Size(533, 161);
+            this.richTextBox_matchResult.TabIndex = 3;
+            this.richTextBox_matchResult.Text = "";
             // 
             // progressBar1
             // 
@@ -202,6 +201,7 @@
             this.buttonPerformMatching.TabIndex = 1;
             this.buttonPerformMatching.Text = "Perform Matching";
             this.buttonPerformMatching.UseVisualStyleBackColor = true;
+            this.buttonPerformMatching.Click += new System.EventHandler(this.buttonPerformMatching_Click);
             // 
             // buttonRecordVoice
             // 
@@ -245,7 +245,7 @@
         private System.Windows.Forms.Button buttonIndex;
         private System.Windows.Forms.Label labelAudioFilePath;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox;
+        private System.Windows.Forms.RichTextBox richTextBox_matchResult;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button buttonPerformMatching;
         private System.Windows.Forms.Button buttonRecordVoice;

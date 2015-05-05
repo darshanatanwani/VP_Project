@@ -27,7 +27,7 @@ namespace Voice_Recognition_Mine
                 if (Path.GetFileName(subDir).Equals("audio"))
                 {
                     audioFiles = Directory.GetFiles(subDir);
-                    foreach(string audiofile in audioFiles)
+                    foreach (string audiofile in audioFiles)
                     {
                         Console.WriteLine("files in audiodirectory : " + audiofile);
                     }
@@ -45,6 +45,22 @@ namespace Voice_Recognition_Mine
                     matchFiles = Directory.GetFiles(subDir);
                 }//End else if
             }//End foreach
+
+            //Evaluate system object initialization
+            Evaluate evaluate = new Evaluate();
+            //EvaluteSystem function call will return false[test failed] or true[test successful]
+            if (evaluate.EvaluateSystem(audioFiles, groundTruthAudioFingerprints, configFiles, matchFiles))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("\n\n [TEST SUCCESSFULLY COMPLETE] \n\n");
+            }//End if
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("\n\n [TEST FAILED] \n\n");
+            }//End else
+
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }

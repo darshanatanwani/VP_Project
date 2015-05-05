@@ -87,9 +87,40 @@ namespace VoiceRecognition
 
 
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        
+        private void buttonPerformMatching_Click(object sender, EventArgs e)
         {
+            
 
+
+
+            //Evaluate system object initialization
+            Evaluate evaluate = new Evaluate();
+            //EvaluteSystem function call will return false[test failed] or true[test successful]
+            if (evaluate.EvaluateSystem(audioFiles, groundTruthAudioFingerprints, configFiles, matchFiles))
+            {
+                richTextBox_matchResult.ForeColor = Color.Green;
+                richTextBox_matchResult.AppendText(Environment.NewLine);
+                richTextBox_matchResult.AppendText ("\n\n\n Successful Match");
+            }//End if
+            else
+            {
+                string result = "Failure in Matching";
+                richTextBox_matchResult.BackColor = Color.Red;
+                //richTextBox_matchResult.SelectionFont.Bold = true; 
+                richTextBox_matchResult.ForeColor = Color.Red;
+                //richTextBox_matchResult.AppendText(Environment.NewLine);
+                richTextBox_matchResult.AppendText(result);
+                //richTextBox_matchResult.Text = "\n\n\n Failure in Matching";
+                //richTextBox_matchResult.BackColor = Color.PaleVioletRed;
+                //textBox_matchResult.ForeColor = Color.Red;
+                //textBox_matchResult.Text = "\n\n\n Failure in Matching";
+
+
+
+            }//End else
+
+            richTextBox_matchResult.ForeColor = Color.White;
         }
     }
 }
