@@ -19,3 +19,22 @@ C:\Users\Darshii\Desktop\VP Project\VP_Project\VoiceRecognition\VoiceRecognition
 C:\Users\Darshii\Desktop\VP Project\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.Practise.resources
 C:\Users\Darshii\Desktop\VP Project\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.Properties.Resources.resources
 C:\Users\Darshii\Desktop\VP Project\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.csproj.GenerateResource.Cache
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\VoiceRecognition.exe.config
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.exe
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.pdb
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\VoiceRecognition.exe
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\VoiceRecognition.pdb
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\Alvas.Audio40.dll
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\CSCore.dll
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\Alvas.Audio40.xml
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\CSCore.xml
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.csprojResolveAssemblyReference.cache
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.FormVoiceRecognition.resources
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.Practise.resources
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.Properties.Resources.resources
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.csproj.GenerateResource.Cache
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\Interop.AUDIOCAPTURELib.dll
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\AxInterop.AUDIOCAPTURELib.dll
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.csproj.ResolveComReference.cache
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\Interop.AUDIOCAPTURELib.dll
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\AxInterop.AUDIOCAPTURELib.dll

@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Alvas.Audio40">
+      <HintPath>..\dll resource\Alvas.Audio40.dll</HintPath>
+    </Reference>
     <Reference Include="CSCore">
       <HintPath>..\dll resource\CSCore.dll</HintPath>
     </Reference>
@@ -136,7 +139,34 @@
   <ItemGroup>
     <None Include="Resources\waveanimation1.gif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AUDIOCAPTURELib">
+      <Guid>{2037E846-0040-4006-A2C4-F8A7D66E4256}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAUDIOCAPTURELib">
+      <Guid>{2037E846-0040-4006-A2C4-F8A7D66E4256}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="data\audio\Rec_01.mp3" />
     <Content Include="data\audio\Rec_02.mp3" />

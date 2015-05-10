@@ -161,9 +161,9 @@
             // 
             this.PbWave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PbWave.Image = global::VoiceRecognition.Properties.Resources.waveanimation1;
-            this.PbWave.Location = new System.Drawing.Point(25, 64);
+            this.PbWave.Location = new System.Drawing.Point(25, 194);
             this.PbWave.Name = "PbWave";
-            this.PbWave.Size = new System.Drawing.Size(476, 167);
+            this.PbWave.Size = new System.Drawing.Size(476, 37);
             this.PbWave.TabIndex = 5;
             this.PbWave.TabStop = false;
             this.PbWave.Visible = false;
