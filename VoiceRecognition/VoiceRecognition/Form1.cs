@@ -16,6 +16,13 @@ using Alvas.Audio;
 /// </summary>
 #endregion
 
+#region <NAudio API>
+///<summary><Alvas Library>
+using NAudio;
+using NAudio.Wave;
+/// </summary>
+#endregion
+
 namespace VoiceRecognition
 {
 
@@ -26,7 +33,10 @@ namespace VoiceRecognition
         string[] configFiles = null;
         string[] matchFiles = null;
         private string dataDirectoryPath = @"data";
-        
+        private NAudio.Wave.WaveIn sourceStream = null;
+        private NAudio.Wave.DirectSoundOut waveOut = null;
+        NAudio.Wave.WaveFileWriter waveWriter = null;
+
         public FormVoiceRecognition()
         {
             InitializeComponent();
@@ -39,20 +49,74 @@ namespace VoiceRecognition
             {
                 buttonRecordVoice.Text = "Stop Recording";
                 PbWave .Visible = true;
-
-                
                 //startRecordingMP3();
                 //string path = Path.ChangeExtension(Application.ExecutablePath, ".wav");
                 //startRecordingMP3(path);
+                try
+                {
+                    if (listAudioDevice.SelectedItems.Count == 0) return;
+
+                    SaveFileDialog save = new SaveFileDialog();
+                    save.Filter = "Wave File (*.wav)|*.wav";
+                    if (save.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+                        return;
+
+                    int deviceNumber= listAudioDevice.SelectedItems[0].Index;
+
+                    sourceStream = new NAudio.Wave.WaveIn();
+                    sourceStream.DeviceNumber = deviceNumber;
+                    sourceStream.WaveFormat = new NAudio.Wave.WaveFormat(44100, NAudio.Wave.WaveIn.GetCapabilities(deviceNumber).Channels);
+
+                    sourceStream.DataAvailable += new EventHandler<NAudio.Wave.WaveInEventArgs>(sourceStream_DataAvaliable);
+                    waveWriter = new NAudio.Wave.WaveFileWriter(save.FileName, sourceStream.WaveFormat);
+                    sourceStream.StartRecording();
+
+                    // afterwards
+                    //waveOut = new NAudio.Wave.DirectSoundOut();
+                    //NAudio.Wave.WaveInProvider waveIn = new NAudio.Wave.WaveInProvider(sourceStream);
+                    //waveOut.Init(waveIn);
+                    //sourceStream.StartRecording();
+                    //waveOut.Play();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Plz select AUDIO Device");
+                }
             }
             else if (buttonRecordVoice.Text == "Stop Recording")
             {
                 buttonRecordVoice.Text = "Record Voice";
                 PbWave .Visible = false;
-
                 //stopRecordingMP3();
+
+                // disppsing the resources if in use
+                if(waveOut != null)
+                {
+                    waveOut.Stop();
+                    waveOut.Dispose();
+                    waveOut = null;
+                }
+                if (sourceStream != null)
+                {
+                    sourceStream.StopRecording();
+                    sourceStream.Dispose();
+                    sourceStream = null;
+                }
+                if(waveWriter != null)
+                {
+                    waveWriter.Dispose();
+                    waveWriter = null;
+                }
             }
         }
+
+        private void sourceStream_DataAvaliable(object sender, WaveInEventArgs e)
+        {
+            if (waveWriter == null) return;
+            waveWriter.WriteData(e.Buffer, 0, e.BytesRecorded);
+            waveWriter.Flush();
+        }
+
 
         //private void stopRecordingMP3()
         //{
@@ -187,11 +251,30 @@ namespace VoiceRecognition
                 //textBox_matchResult.ForeColor = Color.Red;
                 //textBox_matchResult.Text = "\n\n\n Failure in Matching";
 
-
+             
 
             }//End else
 
             richTextBox_matchResult.ForeColor = Color.White;
+        }
+
+        private void buttonRefreshAudioList_Click(object sender, EventArgs e)
+        {
+            List<NAudio.Wave.WaveInCapabilities> sources = new List<NAudio.Wave.WaveInCapabilities> (); 
+            for (int i =0; i<NAudio.Wave.WaveIn.DeviceCount; i++)
+            {
+                sources.Add(NAudio.Wave.WaveIn.GetCapabilities(i));
+            }
+            // just like clear first the items in the list
+            listAudioDevice.Items.Clear();
+
+            foreach (var source in sources)
+            {
+                ListViewItem item = new ListViewItem(source.ProductName);
+                item.SubItems.Add(new ListViewItem.ListViewSubItem(item, source.Channels.ToString()));
+                listAudioDevice.Items.Add(item);
+            }
+            buttonRecordVoice.Visible = true;
         }
     }
 }

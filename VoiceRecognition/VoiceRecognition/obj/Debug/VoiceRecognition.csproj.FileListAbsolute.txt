@@ -38,3 +38,4 @@ C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceR
 C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\obj\Debug\VoiceRecognition.csproj.ResolveComReference.cache
 C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\Interop.AUDIOCAPTURELib.dll
 C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\AxInterop.AUDIOCAPTURELib.dll
+C:\Users\JaJu\Desktop\Software Design & Architecture Lab\Voice\VP_Project\VoiceRecognition\VoiceRecognition\bin\Debug\NAudio.dll

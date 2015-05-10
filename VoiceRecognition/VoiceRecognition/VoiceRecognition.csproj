@@ -38,6 +38,9 @@
     <Reference Include="CSCore">
       <HintPath>..\dll resource\CSCore.dll</HintPath>
     </Reference>
+    <Reference Include="NAudio">
+      <HintPath>..\dll resource\NAudio.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
