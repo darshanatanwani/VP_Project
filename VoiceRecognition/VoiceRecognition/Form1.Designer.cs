@@ -38,25 +38,25 @@
             this.textBoxBrowse = new System.Windows.Forms.TextBox();
             this.buttonBrowse = new System.Windows.Forms.Button();
             this.tabPageMatch = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.listAudioDevice = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonRefreshAudioList = new System.Windows.Forms.Button();
+            this.buttonRecordVoice = new System.Windows.Forms.Button();
+            this.buttonPerformMatching = new System.Windows.Forms.Button();
             this.PbWave = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox_matchResult = new System.Windows.Forms.RichTextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.buttonPerformMatching = new System.Windows.Forms.Button();
-            this.buttonRecordVoice = new System.Windows.Forms.Button();
-            this.buttonRefreshAudioList = new System.Windows.Forms.Button();
-            this.listAudioDevice = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabPageIndex.SuspendLayout();
             this.tabPageMatch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbWave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbWave)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -165,13 +165,87 @@
             this.tabPageMatch.TabIndex = 1;
             this.tabPageMatch.Text = "Match";
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Location = new System.Drawing.Point(8, 6);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.listAudioDevice);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.buttonRefreshAudioList);
+            this.splitContainer1.Panel2.Controls.Add(this.buttonRecordVoice);
+            this.splitContainer1.Panel2.Controls.Add(this.buttonPerformMatching);
+            this.splitContainer1.Size = new System.Drawing.Size(519, 141);
+            this.splitContainer1.SplitterDistance = 333;
+            this.splitContainer1.TabIndex = 8;
+            // 
+            // listAudioDevice
+            // 
+            this.listAudioDevice.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.listAudioDevice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listAudioDevice.Location = new System.Drawing.Point(0, 0);
+            this.listAudioDevice.MultiSelect = false;
+            this.listAudioDevice.Name = "listAudioDevice";
+            this.listAudioDevice.Size = new System.Drawing.Size(333, 141);
+            this.listAudioDevice.TabIndex = 0;
+            this.listAudioDevice.UseCompatibleStateImageBehavior = false;
+            this.listAudioDevice.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Audio Device";
+            this.columnHeader1.Width = 189;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Channels";
+            this.columnHeader2.Width = 112;
+            // 
+            // buttonRefreshAudioList
+            // 
+            this.buttonRefreshAudioList.Location = new System.Drawing.Point(20, 11);
+            this.buttonRefreshAudioList.Name = "buttonRefreshAudioList";
+            this.buttonRefreshAudioList.Size = new System.Drawing.Size(143, 38);
+            this.buttonRefreshAudioList.TabIndex = 6;
+            this.buttonRefreshAudioList.Text = "Refresh Audio Device List";
+            this.buttonRefreshAudioList.UseVisualStyleBackColor = true;
+            this.buttonRefreshAudioList.Click += new System.EventHandler(this.buttonRefreshAudioList_Click_1);
+            // 
+            // buttonRecordVoice
+            // 
+            this.buttonRecordVoice.Location = new System.Drawing.Point(20, 55);
+            this.buttonRecordVoice.Name = "buttonRecordVoice";
+            this.buttonRecordVoice.Size = new System.Drawing.Size(143, 34);
+            this.buttonRecordVoice.TabIndex = 0;
+            this.buttonRecordVoice.Text = "Record Voice";
+            this.buttonRecordVoice.UseVisualStyleBackColor = true;
+            this.buttonRecordVoice.Visible = false;
+            this.buttonRecordVoice.Click += new System.EventHandler(this.buttonRecordVoice_Click_1);
+            // 
+            // buttonPerformMatching
+            // 
+            this.buttonPerformMatching.Location = new System.Drawing.Point(20, 95);
+            this.buttonPerformMatching.Name = "buttonPerformMatching";
+            this.buttonPerformMatching.Size = new System.Drawing.Size(143, 33);
+            this.buttonPerformMatching.TabIndex = 1;
+            this.buttonPerformMatching.Text = "Perform Matching";
+            this.buttonPerformMatching.UseVisualStyleBackColor = true;
+            this.buttonPerformMatching.Visible = false;
+            this.buttonPerformMatching.Click += new System.EventHandler(this.buttonPerformMatching_Click);
+            // 
             // PbWave
             // 
             this.PbWave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PbWave.Image = global::VoiceRecognition.Properties.Resources.waveanimation1;
-            this.PbWave.Location = new System.Drawing.Point(25, 194);
+            this.PbWave.Location = new System.Drawing.Point(25, 113);
             this.PbWave.Name = "PbWave";
-            this.PbWave.Size = new System.Drawing.Size(476, 37);
+            this.PbWave.Size = new System.Drawing.Size(476, 136);
             this.PbWave.TabIndex = 5;
             this.PbWave.TabStop = false;
             this.PbWave.Visible = false;
@@ -201,80 +275,6 @@
             this.progressBar1.Size = new System.Drawing.Size(533, 23);
             this.progressBar1.TabIndex = 2;
             // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Location = new System.Drawing.Point(8, 6);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.listAudioDevice);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.buttonRefreshAudioList);
-            this.splitContainer1.Panel2.Controls.Add(this.buttonRecordVoice);
-            this.splitContainer1.Panel2.Controls.Add(this.buttonPerformMatching);
-            this.splitContainer1.Size = new System.Drawing.Size(519, 182);
-            this.splitContainer1.SplitterDistance = 333;
-            this.splitContainer1.TabIndex = 8;
-            // 
-            // buttonPerformMatching
-            // 
-            this.buttonPerformMatching.Location = new System.Drawing.Point(19, 111);
-            this.buttonPerformMatching.Name = "buttonPerformMatching";
-            this.buttonPerformMatching.Size = new System.Drawing.Size(143, 33);
-            this.buttonPerformMatching.TabIndex = 1;
-            this.buttonPerformMatching.Text = "Perform Matching";
-            this.buttonPerformMatching.UseVisualStyleBackColor = true;
-            this.buttonPerformMatching.Visible = false;
-            this.buttonPerformMatching.Click += new System.EventHandler(this.buttonPerformMatching_Click);
-            // 
-            // buttonRecordVoice
-            // 
-            this.buttonRecordVoice.Location = new System.Drawing.Point(19, 71);
-            this.buttonRecordVoice.Name = "buttonRecordVoice";
-            this.buttonRecordVoice.Size = new System.Drawing.Size(143, 34);
-            this.buttonRecordVoice.TabIndex = 0;
-            this.buttonRecordVoice.Text = "Record Voice";
-            this.buttonRecordVoice.UseVisualStyleBackColor = true;
-            this.buttonRecordVoice.Visible = false;
-            this.buttonRecordVoice.Click += new System.EventHandler(this.buttonRecordVoice_Click);
-            // 
-            // buttonRefreshAudioList
-            // 
-            this.buttonRefreshAudioList.Location = new System.Drawing.Point(19, 27);
-            this.buttonRefreshAudioList.Name = "buttonRefreshAudioList";
-            this.buttonRefreshAudioList.Size = new System.Drawing.Size(143, 38);
-            this.buttonRefreshAudioList.TabIndex = 6;
-            this.buttonRefreshAudioList.Text = "Refresh Audio Device List";
-            this.buttonRefreshAudioList.UseVisualStyleBackColor = true;
-            this.buttonRefreshAudioList.Click += new System.EventHandler(this.buttonRefreshAudioList_Click);
-            // 
-            // listAudioDevice
-            // 
-            this.listAudioDevice.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.listAudioDevice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listAudioDevice.Location = new System.Drawing.Point(0, 0);
-            this.listAudioDevice.MultiSelect = false;
-            this.listAudioDevice.Name = "listAudioDevice";
-            this.listAudioDevice.Size = new System.Drawing.Size(333, 182);
-            this.listAudioDevice.TabIndex = 0;
-            this.listAudioDevice.UseCompatibleStateImageBehavior = false;
-            this.listAudioDevice.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Audio Device";
-            this.columnHeader1.Width = 189;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Channels";
-            this.columnHeader2.Width = 112;
-            // 
             // FormVoiceRecognition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,11 +292,11 @@
             this.tabPageIndex.PerformLayout();
             this.tabPageMatch.ResumeLayout(false);
             this.tabPageMatch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbWave)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PbWave)).EndInit();
             this.ResumeLayout(false);
 
         }
