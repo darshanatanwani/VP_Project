@@ -114,114 +114,88 @@ namespace VoiceRecognition
         //    recordMP3.StopRecord();
         //}
 
-        public string userSelectedFilePath
-        {
-            get
-            {
-                return textBoxBrowse.Text;
-            }
-            set
-            {
-                textBoxBrowse.Text = value;
-            }
+        //public string userSelectedFilePath
+        //{
+        //    get
+        //    {
+        //        return textBoxBrowse.Text;
+        //    }
+        //    set
+        //    {
+        //        textBoxBrowse.Text = value;
+        //    }
 
-        }
+        //}
 
-        private void buttonBrowse_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog FileDialog = new OpenFileDialog();
-            System.Windows.Forms.DialogResult Dr = FileDialog.ShowDialog();
-            if (Dr == DialogResult.OK)
-            {
-                userSelectedFilePath = FileDialog.FileName;
-            }
-        }
+        //private void buttonBrowse_Click(object sender, EventArgs e)
+        //{
+        //    OpenFileDialog FileDialog = new OpenFileDialog();
+        //    System.Windows.Forms.DialogResult Dr = FileDialog.ShowDialog();
+        //    if (Dr == DialogResult.OK)
+        //    {
+        //        userSelectedFilePath = FileDialog.FileName;
+        //    }
+        //}
 
-        private void buttonIndex_Click(object sender, EventArgs e)
-        {
-            richTextBox1.Clear();
-            //comboBoxIndex.Items.Add(textBoxBrowse.Text);
-            //Read all related data from dataDirectoryPath
-            string[] subDirectories = Directory.GetDirectories(dataDirectoryPath);
-            foreach (string subDir in subDirectories)
-            {
-                if (Path.GetFileName(subDir).Equals("audio"))
-                {
-                    audioFiles = Directory.GetFiles(subDir);
-                    foreach (string audiofile in audioFiles)
-                    {
-                        richTextBox1.AppendText(audiofile);
-                        richTextBox1.AppendText(Environment.NewLine);
-                    }
-                }//End if
-            }//End foreach
+        //private void buttonIndex_Click(object sender, EventArgs e)
+        //{
+        //    richTextBox1.Clear();
+        //    //comboBoxIndex.Items.Add(textBoxBrowse.Text);
+        //    //Read all related data from dataDirectoryPath
+        //    string[] subDirectories = Directory.GetDirectories(dataDirectoryPath);
+        //    foreach (string subDir in subDirectories)
+        //    {
+        //        if (Path.GetFileName(subDir).Equals("audio"))
+        //        {
+        //            audioFiles = Directory.GetFiles(subDir);
+        //            foreach (string audiofile in audioFiles)
+        //            {
+        //                richTextBox1.AppendText(audiofile);
+        //                richTextBox1.AppendText(Environment.NewLine);
+        //            }
+        //        }//End if
+        //    }//End foreach
             
-        }
+        //}
 
 
 
         
-        private void buttonPerformMatching_Click(object sender, EventArgs e)
-        {
+        //private void buttonPerformMatching_Click(object sender, EventArgs e)
+        //{
             
+        //    //Evaluate system object initialization
+        //    Evaluate evaluate = new Evaluate();
+        //    //EvaluteSystem function call will return false[test failed] or true[test successful]
+        //    if (evaluate.EvaluateSystem(audioFiles, groundTruthAudioFingerprints, configFiles, matchFiles))
+        //    {
+        //        richTextBox_matchResult.ForeColor = Color.Green;
+        //        richTextBox_matchResult.AppendText(Environment.NewLine);
+        //        richTextBox_matchResult.AppendText ("\n\n\n Successful Match");
+        //    }//End if
+        //    else
+        //    {
+        //        string result = "Failure in Matching";
+        //        richTextBox_matchResult.BackColor = Color.Red;
+        //        //richTextBox_matchResult.SelectionFont.Bold = true; 
+        //        richTextBox_matchResult.ForeColor = Color.Red;
+        //        //richTextBox_matchResult.AppendText(Environment.NewLine);
+        //        richTextBox_matchResult.AppendText(result);
+        //        //richTextBox_matchResult.Text = "\n\n\n Failure in Matching";
+        //        //richTextBox_matchResult.BackColor = Color.PaleVioletRed;
+        //        //textBox_matchResult.ForeColor = Color.Red;
+        //        //textBox_matchResult.Text = "\n\n\n Failure in Matching";
 
+        //    }//End else
 
-
-            //Evaluate system object initialization
-            Evaluate evaluate = new Evaluate();
-            //EvaluteSystem function call will return false[test failed] or true[test successful]
-            if (evaluate.EvaluateSystem(audioFiles, groundTruthAudioFingerprints, configFiles, matchFiles))
-            {
-                richTextBox_matchResult.ForeColor = Color.Green;
-                richTextBox_matchResult.AppendText(Environment.NewLine);
-                richTextBox_matchResult.AppendText ("\n\n\n Successful Match");
-            }//End if
-            else
-            {
-                string result = "Failure in Matching";
-                richTextBox_matchResult.BackColor = Color.Red;
-                //richTextBox_matchResult.SelectionFont.Bold = true; 
-                richTextBox_matchResult.ForeColor = Color.Red;
-                //richTextBox_matchResult.AppendText(Environment.NewLine);
-                richTextBox_matchResult.AppendText(result);
-                //richTextBox_matchResult.Text = "\n\n\n Failure in Matching";
-                //richTextBox_matchResult.BackColor = Color.PaleVioletRed;
-                //textBox_matchResult.ForeColor = Color.Red;
-                //textBox_matchResult.Text = "\n\n\n Failure in Matching";
-
-             
-
-            }//End else
-
-            richTextBox_matchResult.ForeColor = Color.White;
-        }
-
-
-        private void buttonRefreshAudioList_Click_1(object sender, EventArgs e)
-        {
-            List<NAudio.Wave.WaveInCapabilities> sources = new List<NAudio.Wave.WaveInCapabilities>();
-            for (int i = 0; i < NAudio.Wave.WaveIn.DeviceCount; i++)
-            {
-                sources.Add(NAudio.Wave.WaveIn.GetCapabilities(i));
-            }
-            // just like clear first the items in the list
-            listAudioDevice.Items.Clear();
-
-            foreach (var source in sources)
-            {
-                ListViewItem item = new ListViewItem(source.ProductName);
-                item.SubItems.Add(new ListViewItem.ListViewSubItem(item, source.Channels.ToString()));
-                listAudioDevice.Items.Add(item);
-            }
-            buttonRecordVoice.Visible = true;
-            buttonPerformMatching.Visible = true;
-        }
+        //    richTextBox_matchResult.ForeColor = Color.White;
+        //}
 
         private void buttonRecordVoice_Click_1(object sender, EventArgs e)
         {
-            if (buttonRecordVoice.Text == "Record Voice")
+            if (buttonRecordVoice.Text == "Record")
             {
-                buttonRecordVoice.Text = "Stop Recording";
+                buttonRecordVoice.Text = "Stop";
                 PbWave.Visible = true;
                 //startRecordingMP3();
                 //string path = Path.ChangeExtension(Application.ExecutablePath, ".wav");
@@ -257,9 +231,9 @@ namespace VoiceRecognition
                     MessageBox.Show("Plz select AUDIO Device");
                 }
             }
-            else if (buttonRecordVoice.Text == "Stop Recording")
+            else if (buttonRecordVoice.Text == "Stop")
             {
-                buttonRecordVoice.Text = "Record Voice";
+                buttonRecordVoice.Text = "Record";
                 PbWave.Visible = false;
                 //stopRecordingMP3();
 
@@ -281,7 +255,64 @@ namespace VoiceRecognition
                     waveWriter.Dispose();
                     waveWriter = null;
                 }
+                lb_showUserText.Visible = true;
+                bt_ConvertToMP3.Visible = true;
             }
+        }
+
+
+
+
+        /// <summary>
+        /// To Refresh the List of Audio Devices Avaliable
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonRefreshAudioList_Click_1(object sender, EventArgs e)
+        {
+            ListAudioDevicesAvalibale();
+        }
+
+        /// <summary>
+        /// To List the Audio Devices in the AUDIO Devices Listbox
+        /// </summary>
+        private void ListAudioDevicesAvalibale()
+        {
+            List<NAudio.Wave.WaveInCapabilities> sources = new List<NAudio.Wave.WaveInCapabilities>();
+            for (int i = 0; i < NAudio.Wave.WaveIn.DeviceCount; i++)
+            {
+                sources.Add(NAudio.Wave.WaveIn.GetCapabilities(i));
+            }
+            // just like clear first the items in the list
+            listAudioDevice.Items.Clear();
+
+            foreach (var source in sources)
+            {
+                ListViewItem item = new ListViewItem(source.ProductName);
+                item.SubItems.Add(new ListViewItem.ListViewSubItem(item, source.Channels.ToString()));
+                listAudioDevice.Items.Add(item);
+            }
+            buttonRecordVoice.Visible = true;
+        }
+
+        /// <summary>
+        /// To call the convert method for mp3 converstion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bt_ConvertToMP3_Click(object sender, EventArgs e)
+        {
+            container.Visible = false;
+            lb_showUserText.Visible = false;
+            convertToMP3();
+        }
+
+        /// <summary>
+        /// Method to convert Wav to MP3
+        /// </summary>
+        private void convertToMP3()
+        {
+            bt_ConvertToMP3.Visible = false;
         }
     }
 }

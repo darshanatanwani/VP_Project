@@ -28,136 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPageIndex = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBoxIndex = new System.Windows.Forms.ComboBox();
-            this.labelIndex = new System.Windows.Forms.Label();
-            this.buttonIndex = new System.Windows.Forms.Button();
-            this.labelAudioFilePath = new System.Windows.Forms.Label();
-            this.textBoxBrowse = new System.Windows.Forms.TextBox();
-            this.buttonBrowse = new System.Windows.Forms.Button();
             this.tabPageMatch = new System.Windows.Forms.TabPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.PbWave = new System.Windows.Forms.PictureBox();
+            this.container = new System.Windows.Forms.SplitContainer();
+            this.buttonRecordVoice = new System.Windows.Forms.Button();
+            this.buttonRefreshAudioList = new System.Windows.Forms.Button();
             this.listAudioDevice = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.buttonRefreshAudioList = new System.Windows.Forms.Button();
-            this.buttonRecordVoice = new System.Windows.Forms.Button();
-            this.buttonPerformMatching = new System.Windows.Forms.Button();
-            this.PbWave = new System.Windows.Forms.PictureBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.lb_showUserText = new System.Windows.Forms.Label();
+            this.bt_ConvertToMP3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox_matchResult = new System.Windows.Forms.RichTextBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.tabControl1.SuspendLayout();
-            this.tabPageIndex.SuspendLayout();
             this.tabPageMatch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbWave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.container)).BeginInit();
+            this.container.Panel1.SuspendLayout();
+            this.container.Panel2.SuspendLayout();
+            this.container.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPageIndex);
-            this.tabControl1.Controls.Add(this.tabPageMatch);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(541, 476);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // tabPageIndex
-            // 
-            this.tabPageIndex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPageIndex.Controls.Add(this.richTextBox1);
-            this.tabPageIndex.Controls.Add(this.comboBoxIndex);
-            this.tabPageIndex.Controls.Add(this.labelIndex);
-            this.tabPageIndex.Controls.Add(this.buttonIndex);
-            this.tabPageIndex.Controls.Add(this.labelAudioFilePath);
-            this.tabPageIndex.Controls.Add(this.textBoxBrowse);
-            this.tabPageIndex.Controls.Add(this.buttonBrowse);
-            this.tabPageIndex.Location = new System.Drawing.Point(4, 22);
-            this.tabPageIndex.Name = "tabPageIndex";
-            this.tabPageIndex.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageIndex.Size = new System.Drawing.Size(533, 450);
-            this.tabPageIndex.TabIndex = 0;
-            this.tabPageIndex.Text = "Index";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(135, 134);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(275, 258);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
-            // 
-            // comboBoxIndex
-            // 
-            this.comboBoxIndex.FormattingEnabled = true;
-            this.comboBoxIndex.Location = new System.Drawing.Point(135, 134);
-            this.comboBoxIndex.Name = "comboBoxIndex";
-            this.comboBoxIndex.Size = new System.Drawing.Size(275, 21);
-            this.comboBoxIndex.TabIndex = 6;
-            this.comboBoxIndex.Visible = false;
-            // 
-            // labelIndex
-            // 
-            this.labelIndex.AutoSize = true;
-            this.labelIndex.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelIndex.Location = new System.Drawing.Point(37, 142);
-            this.labelIndex.Name = "labelIndex";
-            this.labelIndex.Size = new System.Drawing.Size(77, 13);
-            this.labelIndex.TabIndex = 5;
-            this.labelIndex.Text = "Index File Path";
-            // 
-            // buttonIndex
-            // 
-            this.buttonIndex.Location = new System.Drawing.Point(416, 134);
-            this.buttonIndex.Name = "buttonIndex";
-            this.buttonIndex.Size = new System.Drawing.Size(75, 23);
-            this.buttonIndex.TabIndex = 4;
-            this.buttonIndex.Text = "Index";
-            this.buttonIndex.UseVisualStyleBackColor = true;
-            this.buttonIndex.Click += new System.EventHandler(this.buttonIndex_Click);
-            // 
-            // labelAudioFilePath
-            // 
-            this.labelAudioFilePath.AutoSize = true;
-            this.labelAudioFilePath.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelAudioFilePath.Location = new System.Drawing.Point(37, 61);
-            this.labelAudioFilePath.Name = "labelAudioFilePath";
-            this.labelAudioFilePath.Size = new System.Drawing.Size(78, 13);
-            this.labelAudioFilePath.TabIndex = 3;
-            this.labelAudioFilePath.Text = "Audio File Path";
-            // 
-            // textBoxBrowse
-            // 
-            this.textBoxBrowse.Location = new System.Drawing.Point(135, 54);
-            this.textBoxBrowse.Name = "textBoxBrowse";
-            this.textBoxBrowse.Size = new System.Drawing.Size(275, 20);
-            this.textBoxBrowse.TabIndex = 2;
-            // 
-            // buttonBrowse
-            // 
-            this.buttonBrowse.Location = new System.Drawing.Point(416, 53);
-            this.buttonBrowse.Name = "buttonBrowse";
-            this.buttonBrowse.Size = new System.Drawing.Size(75, 20);
-            this.buttonBrowse.TabIndex = 1;
-            this.buttonBrowse.Text = "Browse";
-            this.buttonBrowse.UseVisualStyleBackColor = true;
-            this.buttonBrowse.Click += new System.EventHandler(this.buttonBrowse_Click);
             // 
             // tabPageMatch
             // 
             this.tabPageMatch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPageMatch.Controls.Add(this.splitContainer1);
-            this.tabPageMatch.Controls.Add(this.PbWave);
             this.tabPageMatch.Controls.Add(this.label1);
-            this.tabPageMatch.Controls.Add(this.richTextBox_matchResult);
-            this.tabPageMatch.Controls.Add(this.progressBar1);
+            this.tabPageMatch.Controls.Add(this.bt_ConvertToMP3);
+            this.tabPageMatch.Controls.Add(this.lb_showUserText);
+            this.tabPageMatch.Controls.Add(this.container);
+            this.tabPageMatch.Controls.Add(this.PbWave);
             this.tabPageMatch.Location = new System.Drawing.Point(4, 22);
             this.tabPageMatch.Name = "tabPageMatch";
             this.tabPageMatch.Padding = new System.Windows.Forms.Padding(3);
@@ -165,23 +64,54 @@
             this.tabPageMatch.TabIndex = 1;
             this.tabPageMatch.Text = "Match";
             // 
-            // splitContainer1
+            // PbWave
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(8, 6);
-            this.splitContainer1.Name = "splitContainer1";
+            this.PbWave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PbWave.Image = global::VoiceRecognition.Properties.Resources.waveanimation1;
+            this.PbWave.Location = new System.Drawing.Point(27, 392);
+            this.PbWave.Name = "PbWave";
+            this.PbWave.Size = new System.Drawing.Size(476, 15);
+            this.PbWave.TabIndex = 5;
+            this.PbWave.TabStop = false;
+            this.PbWave.Visible = false;
             // 
-            // splitContainer1.Panel1
+            // container
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.listAudioDevice);
+            this.container.Location = new System.Drawing.Point(8, 37);
+            this.container.Name = "container";
             // 
-            // splitContainer1.Panel2
+            // container.Panel1
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.buttonRefreshAudioList);
-            this.splitContainer1.Panel2.Controls.Add(this.buttonRecordVoice);
-            this.splitContainer1.Panel2.Controls.Add(this.buttonPerformMatching);
-            this.splitContainer1.Size = new System.Drawing.Size(519, 141);
-            this.splitContainer1.SplitterDistance = 333;
-            this.splitContainer1.TabIndex = 8;
+            this.container.Panel1.Controls.Add(this.listAudioDevice);
+            // 
+            // container.Panel2
+            // 
+            this.container.Panel2.Controls.Add(this.buttonRefreshAudioList);
+            this.container.Panel2.Controls.Add(this.buttonRecordVoice);
+            this.container.Size = new System.Drawing.Size(519, 134);
+            this.container.SplitterDistance = 333;
+            this.container.TabIndex = 8;
+            // 
+            // buttonRecordVoice
+            // 
+            this.buttonRecordVoice.Location = new System.Drawing.Point(24, 69);
+            this.buttonRecordVoice.Name = "buttonRecordVoice";
+            this.buttonRecordVoice.Size = new System.Drawing.Size(143, 34);
+            this.buttonRecordVoice.TabIndex = 0;
+            this.buttonRecordVoice.Text = "Record";
+            this.buttonRecordVoice.UseVisualStyleBackColor = true;
+            this.buttonRecordVoice.Visible = false;
+            this.buttonRecordVoice.Click += new System.EventHandler(this.buttonRecordVoice_Click_1);
+            // 
+            // buttonRefreshAudioList
+            // 
+            this.buttonRefreshAudioList.Location = new System.Drawing.Point(24, 25);
+            this.buttonRefreshAudioList.Name = "buttonRefreshAudioList";
+            this.buttonRefreshAudioList.Size = new System.Drawing.Size(143, 38);
+            this.buttonRefreshAudioList.TabIndex = 6;
+            this.buttonRefreshAudioList.Text = "Refresh Audio Device List";
+            this.buttonRefreshAudioList.UseVisualStyleBackColor = true;
+            this.buttonRefreshAudioList.Click += new System.EventHandler(this.buttonRefreshAudioList_Click_1);
             // 
             // listAudioDevice
             // 
@@ -192,7 +122,7 @@
             this.listAudioDevice.Location = new System.Drawing.Point(0, 0);
             this.listAudioDevice.MultiSelect = false;
             this.listAudioDevice.Name = "listAudioDevice";
-            this.listAudioDevice.Size = new System.Drawing.Size(333, 141);
+            this.listAudioDevice.Size = new System.Drawing.Size(333, 134);
             this.listAudioDevice.TabIndex = 0;
             this.listAudioDevice.UseCompatibleStateImageBehavior = false;
             this.listAudioDevice.View = System.Windows.Forms.View.Details;
@@ -207,73 +137,49 @@
             this.columnHeader2.Text = "Channels";
             this.columnHeader2.Width = 112;
             // 
-            // buttonRefreshAudioList
+            // tabControl1
             // 
-            this.buttonRefreshAudioList.Location = new System.Drawing.Point(20, 11);
-            this.buttonRefreshAudioList.Name = "buttonRefreshAudioList";
-            this.buttonRefreshAudioList.Size = new System.Drawing.Size(143, 38);
-            this.buttonRefreshAudioList.TabIndex = 6;
-            this.buttonRefreshAudioList.Text = "Refresh Audio Device List";
-            this.buttonRefreshAudioList.UseVisualStyleBackColor = true;
-            this.buttonRefreshAudioList.Click += new System.EventHandler(this.buttonRefreshAudioList_Click_1);
+            this.tabControl1.Controls.Add(this.tabPageMatch);
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(541, 476);
+            this.tabControl1.TabIndex = 0;
             // 
-            // buttonRecordVoice
+            // lb_showUserText
             // 
-            this.buttonRecordVoice.Location = new System.Drawing.Point(20, 55);
-            this.buttonRecordVoice.Name = "buttonRecordVoice";
-            this.buttonRecordVoice.Size = new System.Drawing.Size(143, 34);
-            this.buttonRecordVoice.TabIndex = 0;
-            this.buttonRecordVoice.Text = "Record Voice";
-            this.buttonRecordVoice.UseVisualStyleBackColor = true;
-            this.buttonRecordVoice.Visible = false;
-            this.buttonRecordVoice.Click += new System.EventHandler(this.buttonRecordVoice_Click_1);
+            this.lb_showUserText.AutoSize = true;
+            this.lb_showUserText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_showUserText.ForeColor = System.Drawing.Color.Chartreuse;
+            this.lb_showUserText.Location = new System.Drawing.Point(65, 213);
+            this.lb_showUserText.Name = "lb_showUserText";
+            this.lb_showUserText.Size = new System.Drawing.Size(411, 18);
+            this.lb_showUserText.TabIndex = 9;
+            this.lb_showUserText.Text = "You have recorded your WAV now convert it into MP3";
+            this.lb_showUserText.Visible = false;
             // 
-            // buttonPerformMatching
+            // bt_ConvertToMP3
             // 
-            this.buttonPerformMatching.Location = new System.Drawing.Point(20, 95);
-            this.buttonPerformMatching.Name = "buttonPerformMatching";
-            this.buttonPerformMatching.Size = new System.Drawing.Size(143, 33);
-            this.buttonPerformMatching.TabIndex = 1;
-            this.buttonPerformMatching.Text = "Perform Matching";
-            this.buttonPerformMatching.UseVisualStyleBackColor = true;
-            this.buttonPerformMatching.Visible = false;
-            this.buttonPerformMatching.Click += new System.EventHandler(this.buttonPerformMatching_Click);
-            // 
-            // PbWave
-            // 
-            this.PbWave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PbWave.Image = global::VoiceRecognition.Properties.Resources.waveanimation1;
-            this.PbWave.Location = new System.Drawing.Point(25, 113);
-            this.PbWave.Name = "PbWave";
-            this.PbWave.Size = new System.Drawing.Size(476, 136);
-            this.PbWave.TabIndex = 5;
-            this.PbWave.TabStop = false;
-            this.PbWave.Visible = false;
+            this.bt_ConvertToMP3.Location = new System.Drawing.Point(186, 271);
+            this.bt_ConvertToMP3.Name = "bt_ConvertToMP3";
+            this.bt_ConvertToMP3.Size = new System.Drawing.Size(143, 34);
+            this.bt_ConvertToMP3.TabIndex = 7;
+            this.bt_ConvertToMP3.Text = "Convert To MP3";
+            this.bt_ConvertToMP3.UseVisualStyleBackColor = true;
+            this.bt_ConvertToMP3.Visible = false;
+            this.bt_ConvertToMP3.Click += new System.EventHandler(this.bt_ConvertToMP3_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(8, 273);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(47, 357);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Matches";
-            // 
-            // richTextBox_matchResult
-            // 
-            this.richTextBox_matchResult.Location = new System.Drawing.Point(0, 289);
-            this.richTextBox_matchResult.Name = "richTextBox_matchResult";
-            this.richTextBox_matchResult.Size = new System.Drawing.Size(533, 161);
-            this.richTextBox_matchResult.TabIndex = 3;
-            this.richTextBox_matchResult.Text = "";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(0, 247);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(533, 23);
-            this.progressBar1.TabIndex = 2;
+            this.label1.Size = new System.Drawing.Size(241, 18);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Now convert your WAV to MP3";
+            this.label1.Visible = false;
             // 
             // FormVoiceRecognition
             // 
@@ -287,43 +193,32 @@
             this.Name = "FormVoiceRecognition";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Voice Recognition";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPageIndex.ResumeLayout(false);
-            this.tabPageIndex.PerformLayout();
             this.tabPageMatch.ResumeLayout(false);
             this.tabPageMatch.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PbWave)).EndInit();
+            this.container.Panel1.ResumeLayout(false);
+            this.container.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.container)).EndInit();
+            this.container.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
-        #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPageIndex;
         private System.Windows.Forms.TabPage tabPageMatch;
-        private System.Windows.Forms.Button buttonBrowse;
-        private System.Windows.Forms.TextBox textBoxBrowse;
-        private System.Windows.Forms.Button buttonIndex;
-        private System.Windows.Forms.Label labelAudioFilePath;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox_matchResult;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.PictureBox PbWave;
-        private System.Windows.Forms.ComboBox comboBoxIndex;
-        private System.Windows.Forms.Label labelIndex;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer container;
         private System.Windows.Forms.ListView listAudioDevice;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button buttonRefreshAudioList;
         private System.Windows.Forms.Button buttonRecordVoice;
-        private System.Windows.Forms.Button buttonPerformMatching;
+        private System.Windows.Forms.PictureBox PbWave;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Label lb_showUserText;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button bt_ConvertToMP3;
+
+        #endregion
         // private System.Windows.Forms.PictureBox pbwave;
     }
 }

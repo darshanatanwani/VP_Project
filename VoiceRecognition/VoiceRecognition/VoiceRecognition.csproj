@@ -143,23 +143,6 @@
     <None Include="Resources\waveanimation1.gif" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="AUDIOCAPTURELib">
-      <Guid>{2037E846-0040-4006-A2C4-F8A7D66E4256}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="AxAUDIOCAPTURELib">
-      <Guid>{2037E846-0040-4006-A2C4-F8A7D66E4256}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
     <COMReference Include="stdole">
       <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>2</VersionMajor>
