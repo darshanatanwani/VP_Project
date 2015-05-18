@@ -366,6 +366,7 @@ namespace VoiceRecognition
         private void bt_convert_WavToMp3_Click(object sender, EventArgs e)
         {
             convertToMP3();
+            lb_converted.Visible = true;
         }
 
         /// <summary>
@@ -388,6 +389,12 @@ namespace VoiceRecognition
 
             binaryWriter.Write(data, 0, data.Length);
             binaryWriter.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pnl_welcome.Visible = false;
+            tab_recording.Visible = true;
         }
     }
 }

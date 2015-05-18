@@ -30,6 +30,7 @@
         {
             this.tabPageMatch = new System.Windows.Forms.TabPage();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.bt_convert_WavToMp3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.bt_toConvert_mp3 = new System.Windows.Forms.Button();
             this.tb_mp3 = new System.Windows.Forms.TextBox();
@@ -47,8 +48,11 @@
             this.buttonRefreshAudioList = new System.Windows.Forms.Button();
             this.buttonRecordVoice = new System.Windows.Forms.Button();
             this.PbWave = new System.Windows.Forms.PictureBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.bt_convert_WavToMp3 = new System.Windows.Forms.Button();
+            this.tab_recording = new System.Windows.Forms.TabControl();
+            this.pnl_welcome = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lb_converted = new System.Windows.Forms.Label();
             this.tabPageMatch.SuspendLayout();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.container)).BeginInit();
@@ -56,13 +60,13 @@
             this.container.Panel2.SuspendLayout();
             this.container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbWave)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.tab_recording.SuspendLayout();
+            this.pnl_welcome.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPageMatch
             // 
             this.tabPageMatch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPageMatch.Controls.Add(this.pnlMain);
             this.tabPageMatch.Controls.Add(this.label1);
             this.tabPageMatch.Controls.Add(this.bt_ConvertToMP3);
             this.tabPageMatch.Controls.Add(this.lb_showUserText);
@@ -71,12 +75,13 @@
             this.tabPageMatch.Location = new System.Drawing.Point(4, 22);
             this.tabPageMatch.Name = "tabPageMatch";
             this.tabPageMatch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMatch.Size = new System.Drawing.Size(533, 450);
+            this.tabPageMatch.Size = new System.Drawing.Size(546, 480);
             this.tabPageMatch.TabIndex = 1;
             this.tabPageMatch.Text = "Match";
             // 
             // pnlMain
             // 
+            this.pnlMain.Controls.Add(this.lb_converted);
             this.pnlMain.Controls.Add(this.bt_convert_WavToMp3);
             this.pnlMain.Controls.Add(this.label4);
             this.pnlMain.Controls.Add(this.bt_toConvert_mp3);
@@ -85,18 +90,28 @@
             this.pnlMain.Controls.Add(this.bt_toConvert_wav);
             this.pnlMain.Controls.Add(this.tb_wave);
             this.pnlMain.Controls.Add(this.label2);
-            this.pnlMain.Location = new System.Drawing.Point(8, 6);
+            this.pnlMain.Location = new System.Drawing.Point(8, 12);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(519, 434);
+            this.pnlMain.Size = new System.Drawing.Size(558, 506);
             this.pnlMain.TabIndex = 1;
             this.pnlMain.Visible = false;
+            // 
+            // bt_convert_WavToMp3
+            // 
+            this.bt_convert_WavToMp3.Location = new System.Drawing.Point(217, 317);
+            this.bt_convert_WavToMp3.Name = "bt_convert_WavToMp3";
+            this.bt_convert_WavToMp3.Size = new System.Drawing.Size(117, 30);
+            this.bt_convert_WavToMp3.TabIndex = 7;
+            this.bt_convert_WavToMp3.Text = "Convert";
+            this.bt_convert_WavToMp3.UseVisualStyleBackColor = true;
+            this.bt_convert_WavToMp3.Click += new System.EventHandler(this.bt_convert_WavToMp3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.label4.Location = new System.Drawing.Point(94, 223);
+            this.label4.Location = new System.Drawing.Point(95, 235);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(173, 20);
             this.label4.TabIndex = 6;
@@ -104,7 +119,7 @@
             // 
             // bt_toConvert_mp3
             // 
-            this.bt_toConvert_mp3.Location = new System.Drawing.Point(381, 241);
+            this.bt_toConvert_mp3.Location = new System.Drawing.Point(382, 253);
             this.bt_toConvert_mp3.Name = "bt_toConvert_mp3";
             this.bt_toConvert_mp3.Size = new System.Drawing.Size(75, 23);
             this.bt_toConvert_mp3.TabIndex = 5;
@@ -114,7 +129,7 @@
             // 
             // tb_mp3
             // 
-            this.tb_mp3.Location = new System.Drawing.Point(97, 244);
+            this.tb_mp3.Location = new System.Drawing.Point(98, 256);
             this.tb_mp3.Name = "tb_mp3";
             this.tb_mp3.Size = new System.Drawing.Size(278, 20);
             this.tb_mp3.TabIndex = 4;
@@ -124,7 +139,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.label3.Location = new System.Drawing.Point(94, 164);
+            this.label3.Location = new System.Drawing.Point(95, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 20);
             this.label3.TabIndex = 3;
@@ -133,7 +148,7 @@
             // bt_toConvert_wav
             // 
             this.bt_toConvert_wav.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.bt_toConvert_wav.Location = new System.Drawing.Point(381, 181);
+            this.bt_toConvert_wav.Location = new System.Drawing.Point(382, 193);
             this.bt_toConvert_wav.Name = "bt_toConvert_wav";
             this.bt_toConvert_wav.Size = new System.Drawing.Size(75, 23);
             this.bt_toConvert_wav.TabIndex = 2;
@@ -143,7 +158,7 @@
             // 
             // tb_wave
             // 
-            this.tb_wave.Location = new System.Drawing.Point(97, 184);
+            this.tb_wave.Location = new System.Drawing.Point(98, 196);
             this.tb_wave.Name = "tb_wave";
             this.tb_wave.Size = new System.Drawing.Size(278, 20);
             this.tb_wave.TabIndex = 1;
@@ -154,7 +169,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mistral", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.Location = new System.Drawing.Point(136, 56);
+            this.label2.Location = new System.Drawing.Point(137, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(266, 48);
             this.label2.TabIndex = 0;
@@ -208,8 +223,8 @@
             // 
             this.container.Panel2.Controls.Add(this.buttonRefreshAudioList);
             this.container.Panel2.Controls.Add(this.buttonRecordVoice);
-            this.container.Size = new System.Drawing.Size(519, 134);
-            this.container.SplitterDistance = 333;
+            this.container.Size = new System.Drawing.Size(532, 134);
+            this.container.SplitterDistance = 341;
             this.container.TabIndex = 8;
             // 
             // listAudioDevice
@@ -221,7 +236,7 @@
             this.listAudioDevice.Location = new System.Drawing.Point(0, 0);
             this.listAudioDevice.MultiSelect = false;
             this.listAudioDevice.Name = "listAudioDevice";
-            this.listAudioDevice.Size = new System.Drawing.Size(333, 134);
+            this.listAudioDevice.Size = new System.Drawing.Size(341, 134);
             this.listAudioDevice.TabIndex = 0;
             this.listAudioDevice.UseCompatibleStateImageBehavior = false;
             this.listAudioDevice.View = System.Windows.Forms.View.Details;
@@ -238,7 +253,7 @@
             // 
             // buttonRefreshAudioList
             // 
-            this.buttonRefreshAudioList.Location = new System.Drawing.Point(24, 25);
+            this.buttonRefreshAudioList.Location = new System.Drawing.Point(23, 26);
             this.buttonRefreshAudioList.Name = "buttonRefreshAudioList";
             this.buttonRefreshAudioList.Size = new System.Drawing.Size(143, 38);
             this.buttonRefreshAudioList.TabIndex = 6;
@@ -248,7 +263,7 @@
             // 
             // buttonRecordVoice
             // 
-            this.buttonRecordVoice.Location = new System.Drawing.Point(24, 69);
+            this.buttonRecordVoice.Location = new System.Drawing.Point(23, 70);
             this.buttonRecordVoice.Name = "buttonRecordVoice";
             this.buttonRecordVoice.Size = new System.Drawing.Size(143, 34);
             this.buttonRecordVoice.TabIndex = 0;
@@ -268,32 +283,71 @@
             this.PbWave.TabStop = false;
             this.PbWave.Visible = false;
             // 
-            // tabControl1
+            // tab_recording
             // 
-            this.tabControl1.Controls.Add(this.tabPageMatch);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(541, 476);
-            this.tabControl1.TabIndex = 0;
+            this.tab_recording.Controls.Add(this.tabPageMatch);
+            this.tab_recording.Location = new System.Drawing.Point(12, 12);
+            this.tab_recording.Name = "tab_recording";
+            this.tab_recording.SelectedIndex = 0;
+            this.tab_recording.Size = new System.Drawing.Size(554, 506);
+            this.tab_recording.TabIndex = 0;
+            this.tab_recording.Visible = false;
             // 
-            // bt_convert_WavToMp3
+            // pnl_welcome
             // 
-            this.bt_convert_WavToMp3.Location = new System.Drawing.Point(216, 305);
-            this.bt_convert_WavToMp3.Name = "bt_convert_WavToMp3";
-            this.bt_convert_WavToMp3.Size = new System.Drawing.Size(117, 30);
-            this.bt_convert_WavToMp3.TabIndex = 7;
-            this.bt_convert_WavToMp3.Text = "Convert";
-            this.bt_convert_WavToMp3.UseVisualStyleBackColor = true;
-            this.bt_convert_WavToMp3.Click += new System.EventHandler(this.bt_convert_WavToMp3_Click);
+            this.pnl_welcome.Controls.Add(this.button1);
+            this.pnl_welcome.Controls.Add(this.label5);
+            this.pnl_welcome.Location = new System.Drawing.Point(18, 1);
+            this.pnl_welcome.Name = "pnl_welcome";
+            this.pnl_welcome.Size = new System.Drawing.Size(528, 458);
+            this.pnl_welcome.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label5.Location = new System.Drawing.Point(106, 188);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(307, 39);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Audio Matching is Fun";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.button1.Location = new System.Drawing.Point(207, 257);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 41);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Let\'s Start";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lb_converted
+            // 
+            this.lb_converted.AutoSize = true;
+            this.lb_converted.Font = new System.Drawing.Font("Modern No. 20", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_converted.ForeColor = System.Drawing.Color.Lime;
+            this.lb_converted.Location = new System.Drawing.Point(174, 373);
+            this.lb_converted.Name = "lb_converted";
+            this.lb_converted.Size = new System.Drawing.Size(202, 22);
+            this.lb_converted.TabIndex = 8;
+            this.lb_converted.Text = "Conversion Completed...";
+            this.lb_converted.Visible = false;
             // 
             // FormVoiceRecognition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(539, 474);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(573, 530);
+            this.Controls.Add(this.pnl_welcome);
+            this.Controls.Add(this.pnlMain);
+            this.Controls.Add(this.tab_recording);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
             this.Name = "FormVoiceRecognition";
@@ -308,7 +362,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.container)).EndInit();
             this.container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PbWave)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.tab_recording.ResumeLayout(false);
+            this.pnl_welcome.ResumeLayout(false);
+            this.pnl_welcome.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -321,7 +377,7 @@
         private System.Windows.Forms.Button buttonRefreshAudioList;
         private System.Windows.Forms.Button buttonRecordVoice;
         private System.Windows.Forms.PictureBox PbWave;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tab_recording;
         private System.Windows.Forms.Label lb_showUserText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bt_ConvertToMP3;
@@ -334,6 +390,10 @@
         private System.Windows.Forms.Button bt_toConvert_mp3;
         private System.Windows.Forms.TextBox tb_mp3;
         private System.Windows.Forms.Button bt_convert_WavToMp3;
+        private System.Windows.Forms.Panel pnl_welcome;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lb_converted;
 
         #endregion
         // private System.Windows.Forms.PictureBox pbwave;
