@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.tabPageMatch = new System.Windows.Forms.TabPage();
+            this.pnlMain = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.bt_toConvert_mp3 = new System.Windows.Forms.Button();
+            this.tb_mp3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bt_toConvert_wav = new System.Windows.Forms.Button();
+            this.tb_wave = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bt_ConvertToMP3 = new System.Windows.Forms.Button();
             this.lb_showUserText = new System.Windows.Forms.Label();
@@ -40,22 +48,15 @@
             this.buttonRecordVoice = new System.Windows.Forms.Button();
             this.PbWave = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.bt_toConvert_wav = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.bt_toConvert_mp3 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.bt_convert_WavToMp3 = new System.Windows.Forms.Button();
             this.tabPageMatch.SuspendLayout();
+            this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.container)).BeginInit();
             this.container.Panel1.SuspendLayout();
             this.container.Panel2.SuspendLayout();
             this.container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbWave)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPageMatch
@@ -73,6 +74,91 @@
             this.tabPageMatch.Size = new System.Drawing.Size(533, 450);
             this.tabPageMatch.TabIndex = 1;
             this.tabPageMatch.Text = "Match";
+            // 
+            // pnlMain
+            // 
+            this.pnlMain.Controls.Add(this.bt_convert_WavToMp3);
+            this.pnlMain.Controls.Add(this.label4);
+            this.pnlMain.Controls.Add(this.bt_toConvert_mp3);
+            this.pnlMain.Controls.Add(this.tb_mp3);
+            this.pnlMain.Controls.Add(this.label3);
+            this.pnlMain.Controls.Add(this.bt_toConvert_wav);
+            this.pnlMain.Controls.Add(this.tb_wave);
+            this.pnlMain.Controls.Add(this.label2);
+            this.pnlMain.Location = new System.Drawing.Point(8, 6);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(519, 434);
+            this.pnlMain.TabIndex = 1;
+            this.pnlMain.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.label4.Location = new System.Drawing.Point(94, 223);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(173, 20);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Destination File Path For Mp3";
+            // 
+            // bt_toConvert_mp3
+            // 
+            this.bt_toConvert_mp3.Location = new System.Drawing.Point(381, 241);
+            this.bt_toConvert_mp3.Name = "bt_toConvert_mp3";
+            this.bt_toConvert_mp3.Size = new System.Drawing.Size(75, 23);
+            this.bt_toConvert_mp3.TabIndex = 5;
+            this.bt_toConvert_mp3.Text = "browse";
+            this.bt_toConvert_mp3.UseVisualStyleBackColor = true;
+            this.bt_toConvert_mp3.Click += new System.EventHandler(this.bt_toConvert_mp3_Click);
+            // 
+            // tb_mp3
+            // 
+            this.tb_mp3.Location = new System.Drawing.Point(97, 244);
+            this.tb_mp3.Name = "tb_mp3";
+            this.tb_mp3.Size = new System.Drawing.Size(278, 20);
+            this.tb_mp3.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.label3.Location = new System.Drawing.Point(94, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Wav File Path";
+            // 
+            // bt_toConvert_wav
+            // 
+            this.bt_toConvert_wav.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.bt_toConvert_wav.Location = new System.Drawing.Point(381, 181);
+            this.bt_toConvert_wav.Name = "bt_toConvert_wav";
+            this.bt_toConvert_wav.Size = new System.Drawing.Size(75, 23);
+            this.bt_toConvert_wav.TabIndex = 2;
+            this.bt_toConvert_wav.Text = "browse";
+            this.bt_toConvert_wav.UseVisualStyleBackColor = true;
+            this.bt_toConvert_wav.Click += new System.EventHandler(this.bt_toConvert_wav_Click);
+            // 
+            // tb_wave
+            // 
+            this.tb_wave.Location = new System.Drawing.Point(97, 184);
+            this.tb_wave.Name = "tb_wave";
+            this.tb_wave.Size = new System.Drawing.Size(278, 20);
+            this.tb_wave.TabIndex = 1;
+            this.tb_wave.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Mistral", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label2.Location = new System.Drawing.Point(136, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(266, 48);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Conversion To MP3";
             // 
             // label1
             // 
@@ -191,86 +277,15 @@
             this.tabControl1.Size = new System.Drawing.Size(541, 476);
             this.tabControl1.TabIndex = 0;
             // 
-            // pnlMain
+            // bt_convert_WavToMp3
             // 
-            this.pnlMain.Controls.Add(this.label4);
-            this.pnlMain.Controls.Add(this.bt_toConvert_mp3);
-            this.pnlMain.Controls.Add(this.textBox2);
-            this.pnlMain.Controls.Add(this.label3);
-            this.pnlMain.Controls.Add(this.bt_toConvert_wav);
-            this.pnlMain.Controls.Add(this.textBox1);
-            this.pnlMain.Controls.Add(this.label2);
-            this.pnlMain.Location = new System.Drawing.Point(8, 6);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(519, 434);
-            this.pnlMain.TabIndex = 1;
-            this.pnlMain.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Mistral", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.Location = new System.Drawing.Point(136, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(266, 48);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Conversion To MP3";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(97, 184);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(278, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // bt_toConvert_wav
-            // 
-            this.bt_toConvert_wav.Location = new System.Drawing.Point(381, 181);
-            this.bt_toConvert_wav.Name = "bt_toConvert_wav";
-            this.bt_toConvert_wav.Size = new System.Drawing.Size(75, 23);
-            this.bt_toConvert_wav.TabIndex = 2;
-            this.bt_toConvert_wav.Text = "browse";
-            this.bt_toConvert_wav.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.label3.Location = new System.Drawing.Point(94, 164);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Wav File Path";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.label4.Location = new System.Drawing.Point(94, 223);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(173, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Destination File Path For Mp3";
-            // 
-            // bt_toConvert_mp3
-            // 
-            this.bt_toConvert_mp3.Location = new System.Drawing.Point(381, 241);
-            this.bt_toConvert_mp3.Name = "bt_toConvert_mp3";
-            this.bt_toConvert_mp3.Size = new System.Drawing.Size(75, 23);
-            this.bt_toConvert_mp3.TabIndex = 5;
-            this.bt_toConvert_mp3.Text = "browse";
-            this.bt_toConvert_mp3.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(97, 244);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(278, 20);
-            this.textBox2.TabIndex = 4;
+            this.bt_convert_WavToMp3.Location = new System.Drawing.Point(216, 305);
+            this.bt_convert_WavToMp3.Name = "bt_convert_WavToMp3";
+            this.bt_convert_WavToMp3.Size = new System.Drawing.Size(117, 30);
+            this.bt_convert_WavToMp3.TabIndex = 7;
+            this.bt_convert_WavToMp3.Text = "Convert";
+            this.bt_convert_WavToMp3.UseVisualStyleBackColor = true;
+            this.bt_convert_WavToMp3.Click += new System.EventHandler(this.bt_convert_WavToMp3_Click);
             // 
             // FormVoiceRecognition
             // 
@@ -286,14 +301,14 @@
             this.Text = "Voice Recognition";
             this.tabPageMatch.ResumeLayout(false);
             this.tabPageMatch.PerformLayout();
+            this.pnlMain.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
             this.container.Panel1.ResumeLayout(false);
             this.container.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.container)).EndInit();
             this.container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PbWave)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.pnlMain.ResumeLayout(false);
-            this.pnlMain.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -313,11 +328,12 @@
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button bt_toConvert_wav;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_wave;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button bt_toConvert_mp3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_mp3;
+        private System.Windows.Forms.Button bt_convert_WavToMp3;
 
         #endregion
         // private System.Windows.Forms.PictureBox pbwave;

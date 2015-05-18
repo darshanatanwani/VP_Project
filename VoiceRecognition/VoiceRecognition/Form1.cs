@@ -314,8 +314,80 @@ namespace VoiceRecognition
         }
 
         /// <summary>
+        /// To call the load wav file method
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bt_toConvert_wav_Click(object sender, EventArgs e)
+        {
+            loadAudioWavFile();
+        }
+
+        /// <summary>
         /// Method to convert Wav to MP3
         /// </summary>
+        private void loadAudioWavFile()
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                tb_wave.Text = open.FileName;
+            }
+        }
 
+        /// <summary>
+        /// To call the set mp3 file destination path
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bt_toConvert_mp3_Click(object sender, EventArgs e)
+        {
+            SetOutputMP3File();
+        }
+
+        /// <summary>
+        /// To set the user desired mp3 file path
+        /// </summary>
+        private void SetOutputMP3File()
+        {
+            FolderBrowserDialog open = new FolderBrowserDialog();
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = System.IO.Path.GetFileNameWithoutExtension(tb_wave.Text);
+                tb_mp3.Text = open.SelectedPath + string.Format(@"\{0}_.mp3", fileName);
+            }
+        }
+
+        /// <summary>
+        /// To call the conversion method for mp3
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bt_convert_WavToMp3_Click(object sender, EventArgs e)
+        {
+            convertToMP3();
+        }
+
+        /// <summary>
+        /// Conversion process of Wav to MP3
+        /// </summary>
+        private void convertToMP3()
+        {
+            System.IO.FileStream read = System.IO.File.OpenRead(tb_wave.Text);
+            Alvas.Audio.WaveReader wave = new Alvas.Audio.WaveReader(read);
+
+            IntPtr originalAFormat = wave.ReadFormat();
+            byte[] waveReaderData = wave.ReadData();
+            wave.Close();
+
+            IntPtr mp3format = Alvas.Audio.AudioCompressionManager.GetCompatibleFormat(originalAFormat, Alvas.Audio.AudioCompressionManager.MpegLayer3FormatTag);
+
+            byte[] data = AudioCompressionManager.Convert(originalAFormat, mp3format, waveReaderData, false);
+
+            System.IO.BinaryWriter binaryWriter = new System.IO.BinaryWriter(System.IO.File.Create(tb_mp3.Text));
+
+            binaryWriter.Write(data, 0, data.Length);
+            binaryWriter.Close();
+        }
     }
 }
