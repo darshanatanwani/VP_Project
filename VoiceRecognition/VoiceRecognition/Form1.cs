@@ -304,15 +304,18 @@ namespace VoiceRecognition
         {
             container.Visible = false;
             lb_showUserText.Visible = false;
-            convertToMP3();
+            bt_ConvertToMP3.Visible = false;
+            pnlMain.Visible = true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         /// <summary>
         /// Method to convert Wav to MP3
         /// </summary>
-        private void convertToMP3()
-        {
-            bt_ConvertToMP3.Visible = false;
-        }
+
     }
 }
